@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.smsbomber.MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDarkest"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone number:"
+            android:textColor="@color/colorPrimaryLight" />
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:ems="10"
+            android:hint="06 12345678"
+            android:inputType="phone"
+            android:textColor="@color/backgroundLight"
+            android:textColorHighlight="@color/backgroundLight"
+            android:textColorHint="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Text message:"
+            android:textColor="@color/colorPrimaryLight" />
+
+        <EditText
+            android:id="@+id/smsMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:textColor="@color/backgroundLight" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount:"
+            android:textColor="@color/colorPrimaryLight" />
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="@color/backgroundLight" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Interval in seconds:"
+            android:textColor="@color/colorPrimaryLight" />
+
+        <EditText
+            android:id="@+id/interval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="@color/backgroundLight" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/spambutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimaryDarkest"
+            android:drawablePadding="24dp"
+            android:drawableRight="@drawable/ic_send_white_24dp"
+            android:drawableTint="@color/green"
+            android:elevation="8dp"
+            android:foregroundTint="@color/colorPrimaryMedium"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Spam"
+            android:textColor="@color/green" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
