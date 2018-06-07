@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
         myIntent.putExtra("phonenr", receiver); //Optional parameters
         myIntent.putExtra("message", message);
-        myIntent.putExtra("amount", "2");
-        myIntent.putExtra("interval", "5");
+        myIntent.putExtra("amount", smsAmount);
+        myIntent.putExtra("interval", smsInterval);
         MainActivity.this.startActivity(myIntent);
     }
 }

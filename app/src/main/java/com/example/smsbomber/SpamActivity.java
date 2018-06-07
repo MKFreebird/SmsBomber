@@ -82,6 +82,8 @@ public class SpamActivity extends AppCompatActivity {
 
         final int messageAmount = Integer.parseInt(amount);
         final int delay = Integer.parseInt(interval) * 1000;
+        final String textMessage = message;
+        final String phoneNr = phoneNumber;
 
         ExecutorService threadPoolExecutor = newSingleThreadExecutor();
         final Handler handler = new Handler();
@@ -91,13 +93,10 @@ public class SpamActivity extends AppCompatActivity {
                 updateCounter();
                 //checkAmount(messageAmount);
                 SmsManager sms = SmsManager.getDefault();
-                String az = " asielzoekers";
-                if (messageCounter == 1) {
-                    az = " asielzoeker"; }
                 sms.sendTextMessage(
-                        "+31",
+                        phoneNr,
                         null,
-                        Integer.toString(messageCounter) + az,
+                        textMessage,
                         null,
                         null);
                 handler.postDelayed(this, delay);
